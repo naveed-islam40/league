@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap");
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+/* Light mode axis styling (default) */
+.axis text {
+  fill: #000000 !important; /* Black for light mode */
+}
+
+/* Dark mode axis styling */
+.dark-mode .axis text {
+  fill: gray !important; /* White for dark mode */
+}
+
+
+
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #f7f7f7; /* Light mode background */
+}
+
+/* Dark mode when applying a dark class */
+body.dark {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: black; /* Dark mode background */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.slick-dots li button:before
+{
+  font-size: 10px !important;
+  color: #D9D9D9 !important;
+  opacity: 100 !important;
+}
+
+.slick-dots li.slick-active button:before
+{
+  color: #3076B1 !important;
+}
+
+
+/* Dark mode filter for the image */
+.dark-mode .accordion-arrow {
+  filter: invert(1); /* Inverts colors to make the image white */
+}
+
+/* Default light mode */
+.accordion-arrow {
+  filter: none; /* No filter for the image */
+}
+
+
+
+.bg-blue-500
+{
+  background-color: #3076B1 !important;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #7a7b7c;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3076b1;
+  border: none;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-check" viewBox="0 0 16 16"%3E%3Cpath d="M10.97 4.97a.75.75 0 011.08 1.05l-4.5 5.5a.75.75 0 01-1.08 0l-2-2a.75.75 0 111.08-1.05l1.47 1.47 3.97-4.97z" /%3E%3C/svg%3E');
+  background-size: cover;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="radio"]::before {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  accent-color: #198bf6;
+}
+
+@keyframes slideDown {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 1000px; /* adjust this value as needed */
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    max-height: 1000px; /* adjust this value as needed */
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+
+
+.bar {
+  fill: #578fbf;
+}
+.axis {
+  font: 10px sans-serif;
+  margin: 80px;
+}
+
+.x.axis {
+  margin-left: 20px;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+.y.axis {
+  margin: 50px;
+}
+
+
+.pie .apexcharts-legend.apx-legend-position-right
+{
+  top: 40% !important;
+}
+
+
+.rbc-header {
+
+padding: 25px 3px !important;
+}
+
+.rbc-today
+{
+  background-color: transparent !important;
+}
+
+
+.rbc-event
+{
+  background: #E7F6FD !important;
+  margin-top: 15px !important;
+}
+
+.rbc-row-segment .rbc-event-content
+{
+white-space: normal !important;
+font-size: 12px !important;
+color: black !important;
+border-left: 4px solid #3076B1 !important;
+padding:0 3px !important;
+margin: 5px 0 !important;
+
+}
+
+
+/* Styles.css or a similar stylesheet */
+.img-blue {
+  filter: invert(34%) sepia(45%) saturate(596%) hue-rotate(192deg) brightness(90%) contrast(92%);
+
+}
+
+
+
+/* Default light mode */
+.rbc-calendar {
+  background-color: #fff !important; /* Light background */
+  color: #000 !important; /* Dark text */
+}
+
+.rbc-month-view {
+  border-color: #e5e5e5 !important; /* Light borders */
+}
+
+.rbc-day-bg {
+  background-color: white !important;
+}
+
+.rbc-event {
+  border: none !important;
+  color: #fff !important;
+}
+
+.rbc-toolbar {
+  background-color: white !important;
+  color: #000 !important;
+}
+
+.rbc-header {
+  background-color: white !important;
+  color: #71717A !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  
+}
+
+.rbc-date-cell {
+  color: #000 !important;
+}
+
+.rbc-today {
+  background-color: transparent !important;
+}
+
+
+/* Dark mode */
+.dark .rbc-calendar {
+  background-color: black !important;
+  color: #f0f0f0 !important;
+}
+
+.dark .rbc-month-view {
+  border-color: #3a3a3a !important;
+}
+
+.dark .rbc-day-bg {
+  background-color: black !important;
+}
+
+.dark .rbc-event {
+  background-color: #daf0f6 !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.dark .rbc-toolbar {
+  background-color: black !important;
+  color: #f0f0f0 !important;
+}
+
+.dark .rbc-header {
+  background-color: black !important;
+  color: #fff !important;
+}
+
+.dark .rbc-date-cell {
+  color: #fff !important;
+}
+
+.dark .rbc-today {
+  background-color: transparent !important;
+}
+
+.dark .rbc-event:hover {
+  background-color: #555 !important;
+}
