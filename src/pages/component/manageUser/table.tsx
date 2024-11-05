@@ -422,7 +422,6 @@ export default function Table() {
                       <EditDrawer />
                       <Duplicate />
                       <InActive />
-                      <Delect onDelete={handleDelete} />
                     </div>
                   )}
 
